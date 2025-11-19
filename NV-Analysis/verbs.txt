@@ -1,0 +1,26 @@
+Candidate Verbs (Methods/Responsibilities),   Target Nouns (Who/What performs the action?)
+
+Manage:  Employee, Admin, Library, System
+Support:  System, Library
+View:  User, Borrower
+Download:  Borrower (on E-book, Movie, Song, Video-game, App, Podcast, Image)
+Read:  Borrower (on E-book)
+Watch:  Borrower (on Movie)
+Play:  Borrower (on Song, Video-game)
+Execute:  Borrower (on App)
+Listen to:  Borrower (on Podcast)
+Display:  Borrower (on Image)
+Borrow:  Borrower, Media (Item)
+Return:  Borrower, Media (Item)
+Rate:  Borrower, Media (Item)
+List:  Borrower, Library
+Select:  Borrower
+Preview:  Borrower
+Add:  Employee, Library
+Remove:  Employee, Library
+Create:  Admin (User), Employee (User)
+Delete:  Admin (User)
+Update:  Admin (User)
+Guide:  Console Interface
+Validate:  Console Interface, System (Input)
+Handle:  Console Interface, System (Errors/Actions)

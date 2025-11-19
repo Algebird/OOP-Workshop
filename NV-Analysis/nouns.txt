@@ -1,0 +1,17 @@
+Category,Candidate Nouns (Classes),Candidate Nouns (Attributes)
+
+Media Types:
+Media (Abstract/Base Class),  E-book,  Movie,  Song,  Video-game,  App,  Podcast,  Image
+Title, Author, Language, Number of pages, Publication Year, ISBN, Director, Genre, Release Year, Duration, Composer, Singer, File type, Publisher, Supported Platform, Version, File Size, Resolution, File format, Date taken, Episode Number, Host(s), Guest(s)
+
+
+
+Users:
+User (Abstract/Base Class),  Admin,  Employee,  Borrower
+Name, Age, CPR number, Role, Credentials (Implied)
+
+
+
+System/Structure:
+System,  Platform,  Collection,  Library
+Personal information, Item, Details, Action, CPR number, Role, Console interface, Instructions, Input, Error
