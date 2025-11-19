@@ -1,4 +1,4 @@
-Candidate Verbs (Methods/Responsibilities),   Target Nouns (Who/What performs the action?)
+Candidate Verbs (Methods/Responsibilities):   Target Nouns (Who/What performs the action?)
 
 Manage:  Employee, Admin, Library, System
 Support:  System, Library

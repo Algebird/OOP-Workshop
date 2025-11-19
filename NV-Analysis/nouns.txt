@@ -1,4 +1,6 @@
-Category,Candidate Nouns (Classes),Candidate Nouns (Attributes)
+Category: 
+Candidate Nouns (Classes)
+Candidate Nouns (Attributes)
 
 Media Types:
 Media (Abstract/Base Class),  E-book,  Movie,  Song,  Video-game,  App,  Podcast,  Image
