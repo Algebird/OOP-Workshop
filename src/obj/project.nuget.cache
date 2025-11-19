@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ccN8zKkMsdc=",
+  "success": true,
+  "projectFilePath": "/home/pulse/tmp/OOP-Workshop/src/src.csproj",
+  "expectedPackageFiles": [
+    "/home/pulse/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.9/microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
