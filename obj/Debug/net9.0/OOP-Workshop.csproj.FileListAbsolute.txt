@@ -1,0 +1,5 @@
+C:\Users\petre\source\repos\Algebird\OOP-Workshop\obj\Debug\net9.0\OOP-Workshop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petre\source\repos\Algebird\OOP-Workshop\obj\Debug\net9.0\OOP-Workshop.AssemblyInfoInputs.cache
+C:\Users\petre\source\repos\Algebird\OOP-Workshop\obj\Debug\net9.0\OOP-Workshop.AssemblyInfo.cs
+C:\Users\petre\source\repos\Algebird\OOP-Workshop\obj\Debug\net9.0\OOP-Workshop.csproj.CoreCompileInputs.cache
+C:\Users\petre\source\repos\Algebird\OOP-Workshop\obj\Debug\net9.0\OOP-Workshop.sourcelink.json
