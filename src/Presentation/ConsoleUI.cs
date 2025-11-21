@@ -1,5 +1,6 @@
 using OOP_Workshop.Domain;
 using OOP_Workshop.Domain.User;
+using OOP_Workshop.Domain.Media;
 using System;
 using System.Linq;
 using MediaType = OOP_Workshop.Domain.Media.Media;
@@ -171,7 +172,7 @@ namespace OOP_Workshop.Presentation
             Console.WriteLine("Select media type to add: EBook, Movie, Song, VideoGame, App, Podcast, Image");
             string type = ReadString("Type: ").ToLower();
 
-            MediaType? media = MediaFactory.CreateMedia(type);
+            MediaType? media = 
             if (media != null)
             {
                 if (user is Employee emp)
