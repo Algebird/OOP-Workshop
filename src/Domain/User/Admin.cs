@@ -1,4 +1,6 @@
-using OOP_Workshop.Domain.Media;
+using System;
+using System.Collections.Generic;
+using MediaType = OOP_Workshop.Domain.Media.Media;
 
 namespace OOP_Workshop.Domain.User
 {

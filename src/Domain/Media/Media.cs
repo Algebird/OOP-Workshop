@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace OOP_Workshop.Domain.Media
 {
     public abstract class Media
@@ -25,7 +29,6 @@ namespace OOP_Workshop.Domain.Media
         {
             if (stars < 1 || stars > 5)
                 throw new ArgumentException("Rating must be between 1 and 5");
-
             Ratings.Add(stars);
         }
 

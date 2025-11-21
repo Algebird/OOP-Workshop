@@ -1,3 +1,4 @@
+using System;
 using OOP_Workshop.Domain.Interfaces;
 
 namespace OOP_Workshop.Domain.Media
@@ -9,8 +10,7 @@ namespace OOP_Workshop.Domain.Media
         public string Version { get; }
         public double FileSize { get; }
 
-        public App(string title, string genre, int year, string publisher,
-                   string platform, string version, double fileSize)
+        public App(string title, string genre, int year, string publisher, string platform, string version, double fileSize)
             : base("App", title, genre, year, "N/A")
         {
             Publisher = publisher;

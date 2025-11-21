@@ -1,3 +1,5 @@
+using System;
+
 namespace OOP_Workshop.Domain.Media
 {
     public class ImageMedia : Media

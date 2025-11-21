@@ -1,3 +1,4 @@
+using System;
 using OOP_Workshop.Domain.Interfaces;
 
 namespace OOP_Workshop.Domain.Media
@@ -8,8 +9,7 @@ namespace OOP_Workshop.Domain.Media
         public string Composer { get; }
         public int Duration { get; }
 
-        public Song(string title, string singer, string composer,
-                    string genre, int year, string language, int duration)
+        public Song(string title, string singer, string composer, string genre, int year, string language, int duration)
             : base("Song", title, genre, year, language)
         {
             Singer = singer;
@@ -19,7 +19,7 @@ namespace OOP_Workshop.Domain.Media
 
         public void Play() => Console.WriteLine($"Playing song '{Title}'...");
         public void Download() => Console.WriteLine($"Downloading song '{Title}'...");
-        public void Open() => Play();
+        public void Open() => Console.WriteLine($"Opening song '{Title}'...");
 
         public override string GetDetails()
         {

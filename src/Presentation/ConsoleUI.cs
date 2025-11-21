@@ -1,8 +1,8 @@
 using OOP_Workshop.Domain;
-using OOP_Workshop.Domain.Media;
 using OOP_Workshop.Domain.User;
 using System;
 using System.Linq;
+using MediaType = OOP_Workshop.Domain.Media.Media;
 
 namespace OOP_Workshop.Presentation
 {
@@ -20,7 +20,7 @@ namespace OOP_Workshop.Presentation
 
             int roleChoice = ReadInt("Enter role number (1-3): ", 1, 3);
 
-            User currentUser = null;
+            User? currentUser = null;
 
             string name = ReadString("Enter your name: ");
             int age = ReadInt("Enter your age: ", 1, 120);
@@ -124,8 +124,8 @@ namespace OOP_Workshop.Presentation
             string type = ReadString("Enter media type: ").ToLower();
 
             var items = _library.GetAllMedia()
-                .Where(m => m.GetType().Name.ToLower() == type)
-                .ToList();
+                                .Where(m => m.GetType().Name.ToLower() == type)
+                                .ToList();
 
             if (!items.Any())
             {
@@ -142,7 +142,7 @@ namespace OOP_Workshop.Presentation
         private void ViewMediaDetails()
         {
             string title = ReadString("Enter media title: ");
-            var media = _library.SearchByTitle(title);
+            MediaType? media = _library.SearchByTitle(title);
             if (media == null)
             {
                 Console.WriteLine("Media not found.");
@@ -154,7 +154,7 @@ namespace OOP_Workshop.Presentation
         private void RateMedia(User user)
         {
             string title = ReadString("Enter media title to rate: ");
-            var media = _library.SearchByTitle(title);
+            MediaType? media = _library.SearchByTitle(title);
             if (media == null)
             {
                 Console.WriteLine("Media not found.");
@@ -166,26 +166,34 @@ namespace OOP_Workshop.Presentation
             Console.WriteLine("Rating added!");
         }
 
-        private void AddMediaToLibrary(Employee employee)
+        private void AddMediaToLibrary(User user)
         {
             Console.WriteLine("Select media type to add: EBook, Movie, Song, VideoGame, App, Podcast, Image");
             string type = ReadString("Type: ").ToLower();
 
-            Media.Media media = MediaFactory.CreateMedia(type);
+            MediaType? media = MediaFactory.CreateMedia(type);
             if (media != null)
             {
-                employee.AddToLibrary(_library, media);
+                if (user is Employee emp)
+                    emp.AddToLibrary(_library, media);
+                else if (user is Admin adm)
+                    adm.AddToLibrary(_library, media);
+
                 Console.WriteLine($"{type} added to library!");
             }
         }
 
-        private void RemoveMediaFromLibrary(Employee employee)
+        private void RemoveMediaFromLibrary(User user)
         {
             string title = ReadString("Enter media title to remove: ");
-            var media = _library.SearchByTitle(title);
+            MediaType? media = _library.SearchByTitle(title);
             if (media != null)
             {
-                employee.RemoveFromLibrary(_library, media);
+                if (user is Employee emp)
+                    emp.RemoveFromLibrary(_library, media);
+                else if (user is Admin adm)
+                    adm.RemoveFromLibrary(_library, media);
+
                 Console.WriteLine("Media removed!");
             }
             else
@@ -198,7 +206,7 @@ namespace OOP_Workshop.Presentation
         #region User Management (Admin)
         private void ManageUsers(Admin admin)
         {
-            Console.WriteLine("User management not fully implemented. (Example placeholder)");
+            Console.WriteLine("User management not fully implemented. (Placeholder)");
         }
         #endregion
 
@@ -209,7 +217,7 @@ namespace OOP_Workshop.Presentation
             do
             {
                 Console.Write(prompt);
-                input = Console.ReadLine();
+                input = Console.ReadLine() ?? "";
             } while (string.IsNullOrWhiteSpace(input));
 
             return input;

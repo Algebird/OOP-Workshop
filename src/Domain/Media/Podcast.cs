@@ -1,3 +1,4 @@
+using System;
 using OOP_Workshop.Domain.Interfaces;
 
 namespace OOP_Workshop.Domain.Media
@@ -8,8 +9,7 @@ namespace OOP_Workshop.Domain.Media
         public string Guest { get; }
         public int Episode { get; }
 
-        public Podcast(string title, string genre, int year, string language,
-                       string host, string guest, int episode)
+        public Podcast(string title, string genre, int year, string language, string host, string guest, int episode)
             : base("Podcast", title, genre, year, language)
         {
             Host = host;
